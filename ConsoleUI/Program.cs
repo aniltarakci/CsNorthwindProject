@@ -14,14 +14,23 @@ namespace ConsoleUI
             //UpdateProduct(productManager);
             //DeleteProduct(productManager);
             //ListProduct(productManager);
-            ListProductDetails(productManager);
+            //ListProductDetails(productManager);
         }
 
         private static void ListProductDetails(ProductManager productManager)
         {
-            foreach (var product in productManager.GetProductDetails())
+            var result = productManager.GetProductDetails();
+            if (result.Success)
             {
-                Console.WriteLine(product.ProductName + " / " + product.CategoryName);
+                foreach (var product in result.Data)
+                {
+                    Console.WriteLine(product.ProductName + " / " + product.CategoryName);
+                }
+                Console.WriteLine(result.Message);
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
             }
         }
 
@@ -42,7 +51,7 @@ namespace ConsoleUI
 
         private static void ListProduct(ProductManager productManager)
         {
-            foreach (var product in productManager.GetAll())
+            foreach (var product in productManager.GetAll().Data)
             {
                 Console.WriteLine(product.ProductName);
             }

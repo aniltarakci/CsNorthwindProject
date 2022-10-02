@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using Entities.DTOs;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using System;
@@ -11,10 +12,10 @@ namespace Business.Abstract
 {
     public interface IProductService
     {
-        List<Product> GetAll();
-        void Add(Product product);
-        void Update(Product product);
-        void Delete(Product product);
-        List<ProductDetailDto> GetProductDetails();
+        IDataResult<List<Product>> GetAll();
+        IResult Add(Product product);
+        IResult Update(Product product);
+        IResult Delete(Product product);
+        IDataResult<List<ProductDetailDto>> GetProductDetails();
     }
 }
