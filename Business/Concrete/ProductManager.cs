@@ -40,15 +40,20 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductDeleted);
         }
 
+        public IDataResult<Product> GetById(int productId)
+        {
+            return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId), Messages.ProductListed);
+        }
+
         public IDataResult<List<Product>> GetAll()
         {
-            if (DateTime.Now.Hour == 06)
+            if (DateTime.Now.Hour == 12)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MainTenanceTime);
             }
             else
             {
-                return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductListed);
+                return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
             }
         }
 

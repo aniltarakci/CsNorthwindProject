@@ -12,7 +12,8 @@ namespace Business.Constants
         public static string ProductAdded = "Ürün başarıyla eklendi.";
         public static string ProductUpdated = "Ürün başarıyla güncellendi.";
         public static string ProductDeleted = "Ürün başarıyla silindi.";
-        public static string ProductListed = "Ürünler listelendi.";
+        public static string ProductsListed = "Ürünler listelendi.";
+        public static string ProductListed = "Ürün listelendi.";
         public static string ProductDetailsListed = "Ürün ve kategori adı listelendi.";
 
         //Error Messages
