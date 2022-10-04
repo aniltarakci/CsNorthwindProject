@@ -48,11 +48,40 @@ namespace WebAPI.Controllers
             }
         }
 
+        [HttpGet("getproductdetails")]
+        public IActionResult GetProductDetails()
+        {
+            var result = _productService.GetProductDetails();
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+
         [HttpPost("add")]
         public IActionResult Add(Product product)
         {
             var result = _productService.Add(product);
 
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+
+        [HttpDelete("delete")]
+        public IActionResult Delete(Product product)
+        {
+            var result = _productService.Delete(product);
             if (result.Success)
             {
                 return Ok(result);
