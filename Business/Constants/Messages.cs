@@ -24,5 +24,6 @@ namespace Business.Constants
         public static string ProductNotBeDeleted = "Ürün silinemedi.";
         public static string ProductNotBeListed = "Ürünler listelenemedi.";
         public static string ProductNotBeDetailsListed = "Ürün ve kategori adı listelenemedi.";
+        public static string WithStartA = "Ürünler A harfi ile başlamalı.";
     }
 }
