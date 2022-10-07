@@ -25,5 +25,11 @@ namespace Business.Constants
         public static string ProductNotBeListed = "Ürünler listelenemedi.";
         public static string ProductNotBeDetailsListed = "Ürün ve kategori adı listelenemedi.";
         public static string WithStartA = "Ürünler A harfi ile başlamalı.";
+        public static string ProductCountOfCategoryError = "Bir kategoride en fazla 10 ürün olabilir.";
+        public static string ProductNameAlreadyExists = "Aynı isimde ürün eklenemez.";
+        public static string CategoriesListed = "Kategoriler listelendi.";
+        public static string CategoryListed = "Kategori listelendi.";
+        public static string CategoryUpdated = "Kategori güncellendi.";
+        public static string CategoryLimitExceeded = "Kategori limiti aşıldığı için yeni ürün eklenemez.(Kategori limit 15)";
     }
 }
