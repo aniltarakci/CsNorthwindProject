@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -9,15 +10,12 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        //Success Messages
         public static string ProductAdded = "Ürün başarıyla eklendi.";
         public static string ProductUpdated = "Ürün başarıyla güncellendi.";
         public static string ProductDeleted = "Ürün başarıyla silindi.";
         public static string ProductsListed = "Ürünler listelendi.";
         public static string ProductListed = "Ürün listelendi.";
         public static string ProductDetailsListed = "Ürün ve kategori adı listelendi.";
-
-        //Error Messages
         public static string ProductNameInvalid = "Ürün adı en az 2 karakter içermelidir!";
         public static string MainTenanceTime = "Sistem bakımda.";
         public static string ProductNotBeAdded = "Ürün eklenemedi.";
@@ -33,5 +31,11 @@ namespace Business.Constants
         public static string CategoryUpdated = "Kategori güncellendi.";
         public static string CategoryLimitExceeded = "Kategori limiti aşıldığı için yeni ürün eklenemez.(Kategori limit 15)";
         public static string AuthorizationDenied = "Yetkiniz yok.";
+        public static string AccessTokenCreated = "Access token başarıyla oluşturuldu.";
+        public static string UserRegistered = "Kayıt işlemi başarıyla tamamlandı.";
+        public static string UserAlreadyExists = "Kullanıcı mevcut.";
+        public static string UserNotFound = "Kullanıcı bulunamadı.";
+        public static string PasswordError = "Hatalı şifre!";
+        public static string SuccessfulLogin = "Giriş işlemi başarıyla gerçekleşti.";
     }
 }
